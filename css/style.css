@@ -453,7 +453,7 @@ p.desc {
     border: none;
     outline: none;
     border-bottom: 1px solid #c5bebe;
-    height: 5vh;
+    height: 30px;
     background-color: #e6e6e6;
     width: 100%;
     margin-top: 1%;
@@ -476,17 +476,21 @@ p.desc {
 
 .formBTN {
     width: 13vw;
-    height: 7vh;
+    height: 40px;
     cursor: pointer;
     padding: 1%;
     border: none;
     outline: none;
-    border-radius: 10px;
+    border-radius: 5px;
     text-transform: uppercase;
     background: #e6e6e6;
     box-shadow: 5px 5px 5px #00000066,-1px -1px 5px #fffffffa;
     font-family: 'rubik';
     letter-spacing: 2px;
+}
+
+.formBTN:active{
+    box-shadow: inset 5px 5px 5px #00000066,inset -1px -1px 5px #fffffffa;
 }
 
 #formBTNSet {
@@ -515,9 +519,7 @@ p.desc {
     border: 1px solid  #ffbdbd;
  }
  
-.formBTNClick{
-    box-shadow: inset 5px 5px 5px #00000066,inset -1px -1px 5px #fffffffa;
-}
+
 
 #submitStatus {
     width: 100%;
@@ -531,13 +533,38 @@ p.desc {
     background: #e6e6e6;
 }
 
+button#downloadCV {
+    margin-top: 5%;
+    height: 35px;
+    width: 110px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: black;
+    background: #e6e6e6;
+    font-family: 'rubik';
+    margin-right: auto;
+    box-shadow: 5px 5px 5px #00000066,-1px -1px 5px #fffffffa;
+}
+
+button#downloadCV:active{
+    box-shadow: inset 5px 5px 5px #00000066, inset -1px -1px 5px #fffffffa;
+}
+
+.downloadCV a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+}
+
 /*------------------------------------------------------------------------------------------------------*/
 /*---------------------------------------------Footer Style---------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------*/
 
 #contactFooter {
     width: 100%;
-    height: 20vh;
+    min-height: 80px;
     background: #dddcdc;
     padding: 1% 3%;
     display: flex;
@@ -555,7 +582,7 @@ p.desc {
     font-size: 2vw;
     font-weight: 900;
     text-align: center;
-    margin-bottom: 1%;
+    margin-bottom: 3%;
     font-family: 'rufina', sans-serif;
     text-transform: uppercase;
 }
@@ -699,7 +726,7 @@ p.desc {
         width: 100%;
         margin: 0 auto;
         background: #ababab;
-        border-radius: 25px;
+        border-radius: 10px;
         justify-content: center;
     }
 
@@ -833,7 +860,8 @@ p.desc {
     }
 
     .formBTN{
-        width: 40%;
+        height: 35px;
+        width: 30%;
     }
 
     #contactForm h2,

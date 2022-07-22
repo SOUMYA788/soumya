@@ -5,10 +5,11 @@ const reset = document.getElementById("reset");
 const submitStatus = document.getElementById("submitStatus");
 
 const clickFormBTN = (e) => {
-    e.classList.toggle("formBTNClick")
+    e.classList.toggle("BTNClick")
     setTimeout(() => {
-        e.classList.toggle("formBTNClick")
+        e.classList.toggle("BTNClick")
     }, 200);
+    e.stopImmediatePropagation();
 }
 
 form.addEventListener('submit', e => {
@@ -23,7 +24,6 @@ form.addEventListener('submit', e => {
 
             
         })
-
         .catch(error => {
             submitStatus.innerText = "Message Sending Faild, Please Try Again After Sometime"
             setTimeout(() => {
@@ -31,5 +31,7 @@ form.addEventListener('submit', e => {
                 form.reset()
             }, 3000);
         })
+
+        e.stopImmediatePropagation()
 })
 
