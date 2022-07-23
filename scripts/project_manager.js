@@ -22,6 +22,13 @@ const projects = [
         image: "./images/project_images/03.png",
         web_url: "https://soumya788.github.io/calender/",
         desc: "A Simple Web Based Calender"
+    },
+    {
+        id: 4,
+        NAME: "Password Generator",
+        image: "./images/project_images/04.png",
+        web_url: "https://soumya788.github.io/password-generator/",
+        desc: "Password Generator Tool that helps you to create a strong password"
     }
 ]
 
