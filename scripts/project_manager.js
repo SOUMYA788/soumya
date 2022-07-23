@@ -12,9 +12,16 @@ const projects = [
     {
         id: 2,
         NAME: "clock",
-        image: "./images/project_images/clock/01.png",
+        image: "./images/project_images/02.png",
         web_url: "https://soumya788.github.io/dual-clock/",
         desc: "Combination of Analog and Digital clock with neomorphism effect"
+    },
+    {
+        id: 3,
+        NAME: "calender",
+        image: "./images/project_images/03.png",
+        web_url: "https://soumya788.github.io/calender/",
+        desc: "A Simple Web Based Calender"
     }
 ]
 

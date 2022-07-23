@@ -9,7 +9,7 @@ const clickFormBTN = (e) => {
     setTimeout(() => {
         e.classList.toggle("BTNClick")
     }, 200);
-    e.stopImmediatePropagation();
+    e.stopPropagation();
 }
 
 form.addEventListener('submit', e => {
@@ -32,6 +32,6 @@ form.addEventListener('submit', e => {
             }, 3000);
         })
 
-        e.stopImmediatePropagation()
+        e.stopPropagation()
 })
 
