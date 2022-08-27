@@ -6,13 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Create your website with Soumya">
-    <link rel="stylesheet" href="./css/style.css">
-
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="./css/theme_2.css">
     <style>
         .noScriptFullScreen {
             width: 100%;
             height: 80px;
             padding: 0 1%;
+        }
+
+        .navSpan{
+            background-color: black;
+        }
+
+        .navDash{
+            background-color: white;
         }
     </style>
 
@@ -33,23 +41,24 @@
             <span class="navSpan"></span>
         </div>
 
-        <div id="navBox" class="displayHide displayFlex">
+        <nav id="navBox" class="displayHide displayFlex ">
             <div id="navSetOne">
                 <div id="dateTime" class="mt_1">
                     <p id="displayTime" class="displayDateAndTime"></p>
+                    <noscript>SOUMYAJYOTI CHAKRABORTY</noscript>
                     <p id="displayDate" class="displayDateAndTime"></p>
                 </div>
             </div>
 
             <ul id="navUl" class="display_flex_none">
-                <li class="navLi"><a href="./">HOME</a></li>
-                <li class="navLi"><a href="./projects.html">MY PROJECTS</a></li>
-                <li id="navContact" class="navLi"><a href="./contact.html">CONTACT ME</a></li>
+                <li class="navLi otherLi"><a href="./index.html">HOME</a></li>
+                <li class="navLi otherLi"><a href="./projects.html">MY PROJECTS</a></li>
+                <li class="navLi"><a id="contact" href="./contact.html">CONTACT ME</a></li>
             </ul>
-        </div>
+        </nav>
 
 
-        <div id="contactBox">
+        <div id="contact_info">
 
             <div id="contactForm" class="contactBox">
                 <h2>Contact Form</h2>

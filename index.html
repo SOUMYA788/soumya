@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="./css/theme_2.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <style>
-        .noScript{
+        .noScript {
             height: fit-content;
             display: block;
         }
@@ -18,13 +22,13 @@
 <body>
     <div id="mainDiv">
 
-        <div id="navToggleBtn" onclick="okNav()">
+        <div id="navToggleBtn">
             <span class="navSpan"></span>
             <span class="navSpan"></span>
             <span class="navSpan"></span>
         </div>
 
-        <div id="navBox" class="displayHide displayFlex ">
+        <nav id="navBox" class="displayFlex">
             <div id="navSetOne">
                 <div id="dateTime" class="mt_1">
                     <p id="displayTime" class="displayDateAndTime"></p>
@@ -34,60 +38,168 @@
             </div>
 
             <ul id="navUl" class="display_flex_none">
-                <li id="navHome" class="navLi"><a href="./">HOME</a></li>
-                <li class="navLi"><a href="./projects.html">MY PROJECTS</a></li>
-                <li class="navLi"><a href="./contact.html">CONTACT ME</a></li>
+                <li class="navLi"><a id="home" href="./index.html">HOME</a></li>
+                <li class="navLi otherLi"><a href="./projects.html">MY PROJECTS</a></li>
+                <li class="navLi otherLi"><a href="./contact.html">CONTACT ME</a></li>
             </ul>
+        </nav>
+
+        <noscript class="noScript">
+            <span>NOTE</span>: For full functionality of this site, it is necessary to
+            enable the JSVASCRIPT, and please reload this page after enable JavaScript
+        </noscript>
+
+        <img id="inlineImg" src="./images/bg_1.jpg" alt="profile image" srcset="">
+
+        <div id="contentDiv">
+            <div id="intro" class="home">
+                <div id="intro_box_1">
+                    <img id="seperateImg" class="margin_auto" src="./images/01.jpg" alt="profile image" srcset="">
+                </div>
+                <section id="sec1">
+                    <h1>
+                        <span> WEB DEVELOPER AND</span>
+                        <span id="" class="space byy"></span>
+                        <span> UI DESIGNER </span>
+                    </h1>
+
+                    <h2>
+                        Hi, I'm <span>Soumyajyoti</span> Chakraborty
+                    </h2>
+
+                    <p>
+                        a self-taught designer and programmer.
+                        <span class="space1"></span>
+                        My interests include developing websites using HTML, CSS, JavaScript, Node JS and React JS
+                        <span class="space1"></span>
+                        I can help you to make your own personal or commercial websites.
+                    </p>
+
+                </section>
+            </div>
+
+            <div id="prev_works" class="my_project">
+                <div id="prev_works_headding">
+                    <h3 id="prev_works_title">WORKS</h3>
+                    <p class="maximizer">
+                        <a href="./projects.html">
+                            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                        </a>
+                    </p>
+                </div>
+
+                <section id="projects_list" class="swiper mySwiper">
+                    <div id="project_section" class="swiper-wrapper">
+
+                        <!-- <div class="project_holder swiper-slide">
+                            <p id="project_id">01</p>
+                            <img id="project_img" src="./images/github.png" alt="" srcset="">
+                            <h3 class="text_center">PROJECT NAME</h3>
+                            <p id="project_desc">
+                                Project Description Lorem ipsum dolor sit amet consectetur, adipisicing
+                                elit. Dolorum nemo atque aut accusamus, nesciunt quae quaerat, delectus, impedit
+                                suscipit
+                                voluptatibus quo hic !
+                            </p>
+                        </div> -->
+
+                    </div>
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </section>
+            </div>
         </div>
 
-        <div id="contentBox">
-            <noscript class="noScript"> <span>NOTE</span>: For full functionality of this site, it is necessary to enable the JSVASCRIPT, and please reload this page after enable JavaScript</noscript>
-            <div id="cardContainer">
 
-                <div id="cardHolder">
-                    <div id="cardFront" class="cardFace">
-                        <div id="intro" class="cards">
-                            <h1>UI DESIGNER</h1>
-                            <h2>Hi, I'm <br> <span>Soumyajyoti</span> Chakraborty.</h2>
-                            <p>
-                                I am a self-taught designer and programmer. <br>
-                                My interests include developing websites using HTML, CSS, JavaScript, Node JS and React
-                                <br>
-                                I can help you to make your own personal or commercial websites.
-                            </p>
-                            <img src="./images/01.jpg" alt="profile image" srcset="">
+
+
+        <!-- <div id="contact">
+
+            <p>CONTACT INFORMATION</p>
+
+            <div id="contact_info">
+
+                <div id="contactForm" class="contactBox">
+                    <h2>Contact Form</h2>
+
+                    <form name="contact_form" id="contact_form">
+
+                        <label for="Name">Name</label>
+                        <input type="text" id="firstName" name="Name" placeholder="Enter First Name" required>
+
+                        <label for="Phone">Phone Number</label>
+                        <input type="text" inputmode="numeric" name="Phone" id="phoneNumber"
+                            placeholder="Enter Your Mobile Number" required>
+
+                        <label for="Email">Email ID</label>
+                        <input type="email" name="Email" id="email" placeholder="Enter Your Email ID" required>
+
+                        <label for="Message">Message</label>
+                        <textarea name="Message" id="message" cols="10" rows="1"
+                            placeholder="Enter your message in details..." spellcheck="true" required></textarea>
+
+                        <div id="formBTNSet">
+                            <button type="submit" id="submit" class="formBTN">Send</button>
+                            <button type="reset" id="resetBTN" class="formBTN">Reset</button>
                         </div>
-                    </div>
 
-                    <div id="cardBack" class="cardFace">
-                        <div id="cardBackHolder" class="cards">
-                            <div id="skills">
-                                <h1 class="skillsExpHeadding">UI/UX DESIGN</h1>
-                                <p>Design Web/Android Interfaces</p>
+                    </form>
+                    <span id="submitStatus">
+                    </span>
+                </div>
 
-                                <h1 class="skillsExpHeadding">WEB DEVELOPMENT</h1>
-                                <p>Develop Websites Using HTML, CSS, JavaScript, NodeJS and ReactJS</p>
-                            </div>
+                <div id="contactDetails" class="contactBox">
+                    <h2>Personal Details</h2>
+                    <p><img src="./images/phone.png" alt="Phone Number"> 8961726718</p>
+                    <p><img src="./images/email.png" alt="Email ID:"> soumyachakraborty00@gmail.com</p>
+                    <p><img src="./images/github.png"> <a href="https://github.com/SOUMYA788">github.com/SOUMYA788</a>
+                    </p>
 
-                            <div id="exp">
-                                <p>
-                                    I have no experience in any company or never worked as a freelancer before. But I
-                                    think my experience is my projects which I have done before. Check out my projects
-                                    by clicking <a href="/projects">here</a>. Or you can visit the "My projects"
-                                    section. Thank You.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <button id="downloadCV" class="downloadCV">
+                        <a href="./documents/soumyajyoti.pdf" download>Download CV</a>
+                    </button>
+
                 </div>
             </div>
 
-        </div>
+
+
+        </div>  -->
 
     </div>
-    </div>
+    <script src="./scripts/navigate_link.js"></script>
     <script src="./scripts/time.js"></script>
     <script src="./scripts/responsive.js"></script>
+    <script src="./scripts/project_manager.js"></script>
+
+    <script src="./scripts/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            keyboard: {
+                enabled: true,
+            },
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2,
+                slideShadows: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: true,
+        });
+    </script>
+
+
 </body>
 
 </html>

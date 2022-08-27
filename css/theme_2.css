@@ -34,6 +34,8 @@
 
 body {
     background-color: #e6e6e6;
+    scroll-behavior: smooth;
+    font-family: poppins, sans-serif;
 }
 
 .noScript {
@@ -49,316 +51,330 @@ body {
     text-align: center;
 }
 
-.noScript span{
+.noScript span {
     font-family: nunito, serif;
     color: black;
 }
 
-#mainDiv {
-    width: 100%;
+span.space,
+span.space1,
+span.space2,
+span.space3 {
+    display: block;
+    clear: both;
+    line-height: 0;
+    font-size: 0;
 }
 
+span.space {
+    height: 0px;
+}
 
+span.space1 {
+    height: 1px;
+}
 
-/*------------------------------------------------------------------------------------------------------*/
-/*----------------------------------------------Navbar Css----------------------------------------------*/
-/*------------------------------------------------------------------------------------------------------*/
+span.space2 {
+    height: 2px;
+}
+
+span.space3 {
+    height: 3px;
+}
+
+span.space4 {
+    height: 4px;
+}
+
+span.space5 {
+    height: 5px;
+}
+
+span.space6 {
+    height: 6px;
+}
+
+span.space7 {
+    height: 7px;
+}
+
+span.space8 {
+    height: 8px;
+}
+
+span.space9 {
+    height: 9px;
+}
+
+span.space10 {
+    height: 10px;
+}
+
+.margin_auto {
+    margin: 0 auto;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.fs1 {
+    font-size: calc((1vw + 16px) / 2);
+}
+
+.fs1_5 {
+    font-size: calc((1.5vw + 24px) / 2);
+}
+
+.fs2 {
+    font-size: calc((2vw + 32px) / 2);
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------MAIN DIV----------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+
+#mainDiv {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/*--------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------DASH-----------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
 
 #navToggleBtn {
-    width: 7vw;
-    height: 7vw;
-    border: none;
-    outline: none;
-    border-radius: 10px;
+    width: 35px;
+    height: 24px;
     flex-direction: column;
     align-content: center;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     cursor: pointer;
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 2;
     right: 2%;
     top: 2%;
 }
 
 .navSpan {
-    width: 75%;
-    height: 9%;
-    background: black;
+    width: 100%;
+    height: 4px;
+    background: #fff;
     border-radius: 25px;
     transition: 0.5s;
 }
 
-.navDash{
+.navSpan:nth-child(2) {
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.navDash {
     position: absolute;
 }
-.navDash:first-child{
+
+.navDash:first-child {
     transform: rotate(50deg);
 }
-.navDash:nth-child(2){
+
+.navDash:nth-child(2) {
     display: none;
 }
-.navDash:last-child{
+
+.navDash:last-child {
     transform: rotate(-50deg);
 }
 
+/*------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------NAVIGATION-------------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
+
 #navBox {
     width: 100%;
-    height: 60px;
-    padding: 0 2%;
+    height: 62px;
     flex-direction: row;
+    align-content: center;
     justify-content: space-between;
     align-items: center;
-    align-content: center;
+    background-color: black;
+    color: white;
+    padding: 1%;
+    font-family: nunito, sans-serif;
     position: sticky;
     top: 0;
-    background-color: #dddcdc;
-    z-index: 1;
+    font-size: calc((1vw + 16px) / 2);
+
 }
 
-
-#navSetOne {
-    height: 100%;
+nav.displayFlex {
     display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#logoImg {
-    width: 7vw;
-    border-radius: 10%;
-    border: none;
-    outline: none;
-}
-
-#dateTime {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: space-evenly;
-    align-items: center;
-    cursor: pointer;
-}
-
-.displayDateAndTime {
-    font-size: 1.5vw;
-    font-family: 'rubik', sans-serif;
 }
 
 #navUl {
-    width: 60%;
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: space-around;
     align-items: center;
-    animation: move 5s linear;
+    width: 50%;
+    height: 100%;
 }
 
-.navLi {
-    width: 100%;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
+#navUl li {
     list-style: none;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    width: max-content;
 }
 
 #navUl li a {
-    padding: 7% 20%;
-    font-size: 1.5vw;
-    display: flex;
-    color: black;
     text-decoration: none;
-    font-family: 'rubik', serif;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    transition: 0.2s;
-}
-
-#navUl li#navHome a,
-#navUl li#navContact a,
-#navUl li#navProject a,
-#navUl li a:hover{
-    color: #ff4343cb;
-}
-
-
-
-/*--------------------------------------------------------------------------------------------------*/
-/*-----------------------------------------------HOME-----------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------*/
-
-
-#contentBox {
-    width: 100%;
-    min-height: 90vh;
-    background-color: #e6e6e6;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 1% 5%;
+    color: white;
     position: relative;
-    transform-style:preserve-3d ;
-}
-
-#cardContainer, #cardHolder, .cardFace{
-    width: 85vw;
-    height: 50vw;
-}
-
-#cardHolder{
-    position: relative;
-    transition: 0.5s;
-    transform-style: preserve-3d;
-}
-
-.cardFace{
-    position: absolute;
-    backface-visibility: hidden;
-}
-
-#cardHolder #cardBack {
-    transform:rotateY(180deg);
-}
-
-.cards{
-    width: 100%;
+    text-align: center;
+    width: max-content;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    padding: 4%;
-    color: #747373;
-    font-family: 'rufina', sans-serif;
-    background: #e6e6e6;
-    box-shadow: 5px 5px 5px #7c7a7af2, -5px -5px 5px #ffffffdc;
-    border-radius: 10px;   
-    cursor: pointer; 
+    display: inline-block;
 }
 
-#cardContainer:hover #cardHolder{ 
-    transform: rotateY(180deg);
+#navUl li.otherLi a::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    background-color: red;
+    width: 0%;
+    top: 100%;
+    left: 0%;
+    transition: 0.2s ease;
 }
+
+#navUl li.otherLi a::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    background-color: red;
+    width: 0%;
+    top: 100%;
+    right: 0%;
+    transition: 0.2s ease;
+}
+
+#navUl li.otherLi:hover a::before,
+#navUl li.otherLi:hover a::after {
+    width: 50%;
+}
+
+
+
+#home,
+#contact,
+#project {
+    position: relative;
+}
+
+#home::before,
+#contact::before,
+#project::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    background-color: red;
+    width: 100%;
+    top: 100%;
+    left: 0%;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+/*------------------------------------------CONTENT BOX------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+
+#contentDiv {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------INTRODUCTION-----------------------------------------*/
+/*----------------------------------------------------------------------------------------------*/
+
 
 #intro {
-    /* card one */
-    justify-content: space-between;
-    position: relative;
+    min-width: 350px;
+    width: 40%;
+    height: 100%;
+    font-family: poppins;
+    color: #c7c7c7;
+    background-color: #2f3535;
 }
 
-#intro span {
-    color: #ff4343cb;
-}
-
-#intro h1 {
-    font-size: 5vw;
-}
-
-#intro h1:nth-child(2) {
-    text-align: center;
-}
-
-
-#intro h2, 
-#intro p
-{
-    font-size: 3vw;
-}
-
-#intro img {
-    width: 20%;
-    position: absolute;
-    right: 4%;
-}
-
-
-
-/*---------------card backside area---------------*/
-
-#skills{
-    height: -webkit-fill-available;
-}
-
-#skills h1{
-    font-size: 2.5vw;
-}
-
-#skills p, #exp p {
-    font-size: 1.5vw;
-}
-
-#skills p{
-    margin: 2% 0 5%;
-
-}
-
-#exp {
-    height: fit-content;
-} 
-
-#exp p a{
-    color: black;
-    text-decoration: none;
-}
-
-
-
-/*--------------------------------------------------------------------------------------------*/
-/*------------------------------------------PROJECTS------------------------------------------*/
-/*--------------------------------------------------------------------------------------------*/
-
-#projectBox {
+#intro_box_1 {
     width: 100%;
-    margin-top: 1%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.projects {
-    width: 240px;
-    height: 370px;
+    height: 30%;
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: space-between;
-    align-items: flex-start;
-    background: #e6e6e6;
-    margin: 3%;
-    padding: 2%;
-    border-radius: 12px;
-    box-shadow: 5px 5px 5px #00000096, -5px -5px 5px #fffefe;
-}
-
-p.assignNum {
-    width: 25px;
-    height: 25px;
-    border: 1px solid black;
-    border-radius: 25px;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
 }
 
-.projects img {
-    width: 70%;
-    margin: 0 auto;
+#intro section#sec1 {
+    width: 100%;
+    height: 70%;
+    padding: 0 5%;
 }
+
+img#inlineImg {
+    display: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#intro section#sec1 h1 {
+    text-align: center;
+    font-size: calc((2vw + 32px) / 2);
+}
+
+#intro section#sec1 h2 {
+    font-size: calc((1.5vw + 24px) / 2);
+}
+
+#intro section#sec1 h2 span {
+    color: #FF4858;
+}
+
+#intro section#sec1 h1,
+#intro section#sec1 h2 {
+    margin-bottom: 1%;
+}
+
+#intro section#sec1 p {
+    font-size: calc((2vw + 32px)/3);
+}
+
+img#seperateImg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #FF4858;
+    padding: 2px;
+    border: 5px solid white;
+    outline: 2px solid #ff4858;
+}
+
+
+/*--------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------PROJECTS---------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+
 
 .projects h1,
 .projects p.desc,
@@ -390,42 +406,26 @@ p.desc {
 
 
 
-
-/*--------------------------------------------------------------------------------------------*/
-/*----------------------------------------Services Css----------------------------------------*/
-/*--------------------------------------------------------------------------------------------*/
-
-
-#services {
-    margin-top: 1%;
-}
-
-.serviceList p {
-    margin-top: 0.5%;
-}
-
-
-
 /*----------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------Contact Form--------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------*/
 
-
-#contactBox {
+#contact_info {
     width: 100%;
+    font-size: 1.5vw;
+    padding: 2% 5% 0;
+    margin-bottom: 2%;
+
     display: flex;
     flex-direction: row;
-    align-content: center;
-    justify-content: space-evenly;
     align-items: center;
-    font-size: 1.5vw;
-
+    justify-content: space-between;
+    margin-top: 2%;
 }
 
 .contactBox {
     width: 45%;
     padding: 3%;
-    margin: 2% 0;
     box-shadow: 5px 5px 5px #7c7a7af2, -5px -5px 5px #ffffffdc;
     display: flex;
     flex-direction: column;
@@ -434,15 +434,19 @@ p.desc {
     align-content: center;
 }
 
-.contactBox h2{
+.contactBox h2 {
     margin-bottom: 3%;
     font-family: rufina, sans-serif;
 
 }
 
-.contactBox p a{
+.contactBox p a {
     color: black;
     text-decoration: none;
+}
+
+#contact_form {
+    width: 100%;
 }
 
 #contactDetails p {
@@ -467,29 +471,25 @@ p.desc {
     font-family: 'rubik', sans-serif;
 }
 
-#contactForm form input {
+#contactForm form input,
+#contactForm textarea {
     border: none;
     outline: none;
     border-bottom: 1px solid #c5bebe;
-    height: 30px;
-    background-color: #e6e6e6;
-    width: 100%;
     margin-top: 1%;
     margin-bottom: 5%;
+    background-color: transparent;
+}
+
+#contactForm form input {
+    height: 30px;
+    width: 100%;
 }
 
 #contactForm textarea {
-    display: flex;
-    margin-top: 1%;
-    margin-bottom: 5%;
     min-width: 100%;
     max-width: 100%;
     padding: 1% 0%;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid #c5bebe;
-    background-color: #e6e6e6;
-
 }
 
 .formBTN {
@@ -502,13 +502,13 @@ p.desc {
     border-radius: 5px;
     text-transform: uppercase;
     background: #e6e6e6;
-    box-shadow: 5px 5px 5px #00000066,-1px -1px 5px #fffffffa;
+    box-shadow: 5px 5px 5px #00000066, -1px -1px 5px #fffffffa;
     font-family: 'rubik';
     letter-spacing: 2px;
 }
 
-.formBTN:active{
-    box-shadow: inset 5px 5px 5px #00000066,inset -1px -1px 5px #fffffffa;
+.formBTN:active {
+    box-shadow: inset 5px 5px 5px #00000066, inset -1px -1px 5px #fffffffa;
 }
 
 #formBTNSet {
@@ -526,17 +526,17 @@ p.desc {
 }
 
 #resetBTN {
-   color: #ff2c2cdb;
+    color: #ff2c2cdb;
 }
 
-#submit:hover{
+#submit:hover {
     border: 1px solid #bdffbd;
 }
 
 #resetBTN:hover {
-    border: 1px solid  #ffbdbd;
- }
- 
+    border: 1px solid #ffbdbd;
+}
+
 
 
 #submitStatus {
@@ -562,19 +562,20 @@ button#downloadCV {
     background: #e6e6e6;
     font-family: 'rubik';
     margin-right: auto;
-    box-shadow: 5px 5px 5px #00000066,-1px -1px 5px #fffffffa;
+    box-shadow: 5px 5px 5px #00000066, -1px -1px 5px #fffffffa;
 }
 
-button#downloadCV:active{
+button#downloadCV:active {
     box-shadow: inset 5px 5px 5px #00000066, inset -1px -1px 5px #fffffffa;
 }
 
-.downloadCV a{
+.downloadCV a {
     width: 100%;
     height: 100%;
     text-decoration: none;
     color: black;
 }
+
 
 /*------------------------------------------------------------------------------------------------------*/
 /*---------------------------------------------Footer Style---------------------------------------------*/
@@ -624,7 +625,6 @@ button#downloadCV:active{
 }
 
 
-
 /*------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------Common CSS----------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------*/
@@ -634,9 +634,7 @@ button#downloadCV:active{
     position: relative;
 }
 
-.displayFlex {
-    display: flex;
-}
+
 
 
 /*------------------------------------------------------------------------------------------------------*/
@@ -682,60 +680,80 @@ button#downloadCV:active{
 }
 
 
+
+
 /*------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------Responsive CSS--------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------*/
 
-@media screen and (max-width:900px){
+@media screen and (max-width:900px) {
 
-    /*--------HOME CARDS 900PX--------*/
-    #cardContainer, #cardHolder, .cardFace{
-        width: 65vw;
-        height: 40vw;
+    #navBox {
+        z-index: 1000;
     }
 
-    #intro h1 {
-        font-size: 3.5vw;
+    #contentDiv {
+        flex-direction: column;
+        height: -moz-available;
+        height: -webkit-fill-available;
+        height: fill-available;
     }
 
-    #intro h2, #intro p {
-        font-size: 2.5vw;
+    #intro {
+        min-width: 100%;
+        width: 100%;
+        min-height: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
-    #skills h1 {
-        font-size: 3vw;
+    #intro #intro_box_1 {
+        height: 120px;
     }
 
-    #skills p, #exp p {
-        font-size: 2vw;
+    #intro section#sec1 h1 {
+        font-size: calc((1.5vw + 24px) / 2);
     }
 
+    .byy.space {
+        display: none;
+    }
 }
 
 
 
 @media screen and (max-width: 610px) {
 
+    
+    /* #mainDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    */
+
     /*----------NAV 610PX----------*/
 
     #navToggleBtn {
         display: flex;
-        position: fixed;
     }
 
     #navBox {
         min-height: 100%;
-        width: 50%;
+        width: 40%;
         flex-direction: column;
         align-items: flex-start;
         position: fixed;
         right: 0;
         top: 0%;
         padding: 12% 5% 2%;
-        background: #bdbdbd;
     }
 
-    .displayFlex {
+    nav.displayFlex {
         display: none;
     }
 
@@ -743,7 +761,6 @@ button#downloadCV:active{
         height: 10%;
         width: 100%;
         margin: 0 auto;
-        background: #ababab;
         border-radius: 10px;
         justify-content: center;
     }
@@ -752,7 +769,8 @@ button#downloadCV:active{
         width: 90%;
         height: 80%;
         flex-direction: column;
-        /* animation: move 5s linear; */
+        align-items: flex-start;
+        animation: move 5s linear;
     }
 
     .displayDateAndTime {
@@ -760,12 +778,11 @@ button#downloadCV:active{
     }
 
     #navUl li {
-        height: 15%;
         align-items: flex-start;
     }
 
     #navUl li a {
-        color: #3f3e3e;
+        color: white;
         font-size: 3vw;
         padding: 0;
     }
@@ -794,115 +811,6 @@ button#downloadCV:active{
         animation: addNav 0.5s linear 1;
     }
 
-
-    /* ----------HOME 610PX---------- */
-
-    #contentBox {
-        height: 100vh;
-    }
-
-    #cardContainer, #cardHolder, .cardFace{
-        width: 85vw;
-        height: 55vw;
-    }
-
-    #intro {
-        width: 100%;
-        height: 100%;
-    }
-
-    #intro h1 {
-        font-size: 5vw;
-    }
-
-    #byy{
-        display: none;
-    }
-
-    #intro h2 {
-        font-size: 4vw;
-    }
-
-    #intro p {
-        font-size: 3.5vw;
-    }
-
-    #intro img {
-        right: 4%;
-        top: 6%;
-        width: 15vw;
-    }
-
-    #skills h1 {
-        font-size: 4vw;
-    }
-
-    #skills p, #exp p{
-        font-size: 3vw;
-    }
-
-    #skills p {
-        margin-bottom:3%;
-    }
-
-
-
-    /*--------------------Projects 610px--------------------*/
-    .projects {
-        width: 320px;
-        height: 450px;
-        padding: 5%;
-    }
-
-    .projects h1, .projects p.desc, .projects p.link {
-        font-size: 18px;
-    }
-
-    /* --------------------CONTACT CSS-------------------- */
-
-    #contactBox {
-        margin-top: 5%;
-        flex-direction: column;
-    }
-
-    .contactBox {
-        height: fit-content;
-        width: 80%;
-        padding: 3%;
-    }
-
-    /* change contact box here */
-
-    #iconCredit {
-        width: 100vw;
-    }
-
-    #contactForm form input{
-        margin: 1% 0 10%;
-    }
-
-    .formBTN{
-        height: 35px;
-        width: 30%;
-    }
-
-    #contactForm h2,
-    #contactForm form label,
-    #contactForm form input,
-    #contactForm form textarea,
-    #contactForm form button,
-    #contactDetails h2,
-    #contactDetails p,
-    #iconCredit ul li a,
-    #iconCredit p {
-        font-size: 3vw;
-    }
-
-    /*--------------------contact footer--------------------*/
-
-    #contactFooter{
-        margin-top: 5%;
-    }
 }
 
 
@@ -925,10 +833,10 @@ button#downloadCV:active{
 }
 
 @media screen and (max-width:400px) {
-    #navToggleBtn {
+    /* #navToggleBtn {
         width: 8vw;
         height: 8vw;
-    }
+    } */
 
     /* #intro {
         height: 220px;
@@ -951,14 +859,14 @@ button#downloadCV:active{
 }
 
 @media screen and (max-width:300px) {
-    /* #navToggleBtn {
-        width: 12vw;
-    } */
+    #navToggleBtn {
+        width: 32px;
+    }
 
-    #intro {
+    /* #intro {
         width: 270px;
         height: 185px;
-    }
+    } */
 
     /*
     #intro h1 {
@@ -970,33 +878,17 @@ button#downloadCV:active{
 }
 
 @media screen and (max-width:200px) {
+
     #navToggleBtn {
-        width: 12vw;
-        height: 10vw;
+        width: 28px;
+        height: 22px;
+    }
+
+    #navToggleBtn span{
+        height: 3px;
     }
 
     #intro {
-        width: 180px;
-        height: 115px;
-    }
-
-    .projects {
-        width: 170px;
-        height: 250px;
-        padding: 5%;
-    }
-
-    .projects h1, .projects p.desc, .projects p.link {
-        font-size: 10px;
-    }
-
-    .projects img {
-        width: 65%;
-    }
-
-    p.assignNum {
-        width: 20px;
-        height: 20px;
-        font-size: 10px;
+        min-height: 370px;
     }
 }
