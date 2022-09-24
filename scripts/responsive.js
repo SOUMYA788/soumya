@@ -1,30 +1,18 @@
 let navBtn = document.getElementById("navToggleBtn");
-let navUl = document.getElementById("navUl");
-let navBox = document.getElementById("navBox");
-let navSpanOne = document.getElementsByClassName("navSpan")[0];
-let navSpanTwo = document.getElementsByClassName("navSpan")[1];
-let navSpanThree = document.getElementsByClassName("navSpan")[2];
+let navUl = document.getElementById("navUl")
+let navLi = document.querySelectorAll(".navLi")
 
-let navDashParent = undefined;
-
-if (document.getElementsByClassName("navDash").length != 0) {
-    navDashParent = document.getElementsByClassName("navDash")[1].parentElement;
-}
-
-if (navDashParent!=undefined) {
-    
-}
-
-
-
-
-navBtn.addEventListener('click', (e) => {
+navBtn.addEventListener("click", (e) => {
     e.stopPropagation();
-    navBox.classList.toggle("displayHide");
-    navBox.classList.toggle("displayFlex");
-    navBox.classList.toggle("flexBox");
-    navBox.classList.toggle("displayShow");
-    navSpanOne.classList.toggle("navDash")
-    navSpanTwo.classList.toggle("navDash")
-    navSpanThree.classList.toggle("navDash")
+    navBtn.classList.toggle("navBtn");
+    navUl.classList.toggle("navUl")
+    navLi.forEach((link, index) => { 
+        if (link.style.animation) {
+            link.style.animation = "";
+        }else{
+            link.style.animation = `navLiAnim 0.5s ease forwards ${index / 5}s`
+        }
+    })
 })
+
+// name duration timing-function delay iteration-count direction fill-mode

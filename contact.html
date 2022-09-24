@@ -15,11 +15,11 @@
             padding: 0 1%;
         }
 
-        .navSpan{
+        .navSpan {
             background-color: black;
         }
 
-        .navDash{
+        .navDash {
             background-color: white;
         }
     </style>
@@ -30,18 +30,14 @@
 <body>
 
     <noscript class="noScript noScriptFullScreen">
-        This browser is disabled JavaScript, so you cannot send message via contact-form.<br> To use the form Please enable the JavaScript
+        This browser is disabled JavaScript, so you cannot send message via contact-form.<br> To use the form Please
+        enable the JavaScript
         from browser's setting and reload the page again.
     </noscript>
+
     <div id="mainDiv">
 
-        <div id="navToggleBtn" onclick="okNav()">
-            <span class="navSpan"></span>
-            <span class="navSpan"></span>
-            <span class="navSpan"></span>
-        </div>
-
-        <nav id="navBox" class="displayHide displayFlex ">
+        <nav id="navBox" class="displayFlex">
             <div id="navSetOne">
                 <div id="dateTime" class="mt_1">
                     <p id="displayTime" class="displayDateAndTime"></p>
@@ -50,11 +46,17 @@
                 </div>
             </div>
 
-            <ul id="navUl" class="display_flex_none">
-                <li class="navLi otherLi"><a href="./index.html">HOME</a></li>
+            <ul id="navUl" class="">
+                <li class="navLi otherLi"><a  href="./index.html">HOME</a></li>
                 <li class="navLi otherLi"><a href="./projects.html">MY PROJECTS</a></li>
                 <li class="navLi"><a id="contact" href="./contact.html">CONTACT ME</a></li>
             </ul>
+
+            <div id="navToggleBtn">
+                <div class="navDiv"></div>
+                <div class="navDiv"></div>
+                <div class="navDiv"></div>
+            </div>
         </nav>
 
 
@@ -80,8 +82,8 @@
                         placeholder="Enter your message in details..." spellcheck="true" required></textarea>
 
                     <div id="formBTNSet">
-                        <button type="submit" id="submit" class="formBTN">Send</button>
-                        <button type="reset" id="resetBTN" class="formBTN">Reset</button>
+                        <button type="submit" id="submit" class="form_btn formBTN">Send</button>
+                        <button type="reset" id="resetBTN" class="form_btn formBTN">Reset</button>
                     </div>
 
                 </form>
@@ -95,7 +97,7 @@
                 <p><img src="./images/email.png" alt="Email ID:"> soumyachakraborty00@gmail.com</p>
                 <p><img src="./images/github.png"> <a href="https://github.com/SOUMYA788">github.com/SOUMYA788</a> </p>
 
-                <button id="downloadCV" class="downloadCV">
+                <button id="downloadCV" class="form_btn downloadCV">
                     <a href="./documents/soumyajyoti.pdf" download>Download CV</a>
                 </button>
 

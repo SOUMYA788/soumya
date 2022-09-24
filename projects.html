@@ -28,13 +28,7 @@
 <body>
     <div id="mainDiv">
 
-        <div id="navToggleBtn" onclick="okNav()">
-            <span class="navSpan"></span>
-            <span class="navSpan"></span>
-            <span class="navSpan"></span>
-        </div>
-
-        <nav id="navBox" class="displayHide displayFlex ">
+        <nav id="navBox" class="displayFlex">
             <div id="navSetOne">
                 <div id="dateTime" class="mt_1">
                     <p id="displayTime" class="displayDateAndTime"></p>
@@ -43,11 +37,17 @@
                 </div>
             </div>
 
-            <ul id="navUl" class="display_flex_none">
+            <ul id="navUl" class="">
                 <li class="navLi otherLi"><a href="./index.html">HOME</a></li>
                 <li class="navLi"><a id="project" href="./projects.html">MY PROJECTS</a></li>
                 <li class="navLi otherLi"><a href="./contact.html">CONTACT ME</a></li>
             </ul>
+
+            <div id="navToggleBtn">
+                <div class="navDiv"></div>
+                <div class="navDiv"></div>
+                <div class="navDiv"></div>
+            </div>
         </nav>
 
         <noscript class="noScript noScriptFullScreen">
